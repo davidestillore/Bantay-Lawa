@@ -1,0 +1,325 @@
+/*########## Defaults ##########*/
+
+nav, header, footer {
+    display:block;
+}
+
+/* NOTICE HOW MOST OF YOUR ELEMENTS HAVE display:block. This is because it is relatively easier to position block elements. So make it a habbit to display elements as blocks*/
+/* MARGIN: AUTO  is the easiest way to evenly distribute spaces around your block elements.*/
+
+body{
+    line-height: 1; 
+/*    All text will have a spacing of 1 as a height. */
+    margin:0; /* We want to make sure that there is no margin */
+}
+
+/*############ Nav Bar ##########*/
+
+nav {
+    width: 100%; /* We want the Nav Bar to consume 100% of the screen-width */
+    margin: 0;
+}
+
+nav ul{
+    background-color: #eee;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+ul.topnav li{                           /* Set all lists to be floating left */
+    list-style: none;                   /*To remove the bullets */ 
+    float: left;
+}
+
+ul.topnav li.topnav-right{              /*Set the last 2 to be floating right */
+    float: right;
+}
+
+ul.topnav li a {
+    display: block;
+    text-decoration: none;              /* Remove the underline */
+    min-height: 16px;                   /* For Mobile Responsiveness */
+    text-align: center;
+    padding: 14px;
+    text-transform: uppercase;
+    color: #666;
+}
+
+/*Animation when hovering*/
+ul.topnav li a:hover{                    /*Hover animation for anchors "a"*/
+    background-color: #0080ff;
+    color: #fff;                                   
+}
+
+ul.topnav li.dropdownIcon {
+    display: none;                        /*    So it will not be displayed on desktop*/
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 88.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+* {
+    box-sizing: border-box; 
+    /* So when you add margin to elements inside the columns, the size of the column will be controlled */ 
+}
+
+
+/*########## Section 2 #################*/
+
+.container {
+    width:100%;         /* we want our containers to take up whole desktop */
+    margin: auto;       /*takes all elements in container, and evenly distributes unused space */
+    padding-top: 4%;
+    padding-bottom: 4%; /* makes space in element. 4% of container */
+}
+
+/* ### CUSTOM STYLES ##### */
+#section-1-gradient{
+    background: #076DFF; /*for browsers that do not support gradient */
+    background: -webkit-linear-gradient(#076DFF, #65a5ff); /* For Safari */
+    background: -o-linear-gradient(#076DFF,#65a5ff); /* For Opera */
+    background: -moz-linear-gradient(#076DFF,#65a5ff); /* For Firefox */
+    background: linear-gradient(#076DFF,#65a5ff); /* Standard Syntax */
+}
+
+.row {
+    width: 100%;
+    display: flex; /*Latch and grab any elements inside row. So they will change sizes */
+    flex-wrap: wrap; /* All elements in the row, the content will be wrapped around UNDERNEATH */
+    align-items: center; /* Helps take the items and center them for us */
+}
+
+.row::after {
+    display: table;     /* With every row, reset. Start with fresh new rows */
+    clear: both;        /* Removes any floats on any elements so its not inherited from previous elements*/ 
+    content: "";
+}
+
+
+h1.large {
+    color: #fff;
+    font-size: 56px;
+    margin: 0;
+    line-height: 70px;
+}
+
+input[type="text"]{    /*Attribute Selector */
+    font-size: 20px;
+    width: 400px;
+    min-width: 100px;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+form h2 {
+    color: #fff;
+}
+
+.leftSide-col {
+    margin-left: 30%;
+}
+
+.rightSide-col {
+    margin-left: 15%;
+}
+
+
+
+/* ################# SECTION 3 ############### */
+h1.section2Header {
+    font-size: 65px;
+    text-align: center;
+}
+
+
+div.box {
+    background-color: #fff;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.15),
+        0 2px 3px 0 rgba(0,0,0,0.1);
+    text-align: center;
+    margin: 24px;
+    padding: 36px 24px 40px 24px;
+    border-radius: 7px;
+}
+
+div.icon {
+    width: 100%;    /* So the image will always be 100% of what the screen is */ 
+}
+
+label {
+    font-size: 35px;
+    font-weight: 900
+}
+
+p {
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+button {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #0069ff;
+    padding: 15px 60px;
+    border-radius: 7px;
+    display: block;
+    text-align: center;
+    margin: 5px;
+}
+
+button.learnMore {
+    display: block;
+    margin: auto; /* Will center the button */ 
+}
+
+
+/* ################# Section 4 ################# */
+
+article p {
+    font-size: 35px;
+    padding: 20px;
+}
+
+div.lilyIcon img {
+    display: block;
+    margin: auto;
+    box-shadow: -2px -2px 20px 2px rgba(0, 0, 0, .10), 2px 2px 17px 2px rgba(0, 0, 0, 1);
+/*    horizontal, vertical, blur, spread rgba (shadow, background color, box color, opacity) */
+}
+
+/*############### Footer ############################*/
+
+footer.footerMain {
+    background-color: #666;
+    padding-left: 10%;
+}
+
+footer.footerMain h1 {
+    color: #fff;
+    font-size: 35px;
+}
+
+footer.footerMain ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 0;
+}
+
+footer.footerMain ul li {
+    color: #fff;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+
+/*######### Mobile ###########*/
+/*######### Nav Bar ###########*/
+@media screen and (max-width: 680px){       /*When the screen reaches 680px, run */
+    
+    ul.topnav li:not(:nth-child(1)) {       /*Do this to all, except 1st child */
+        display:none;                       /*All will disappear except Home */
+    }
+    
+    ul.topnav li.dropdownIcon {             /*Dropdown Icon will show up*/
+        display:block;
+        float: right;
+    }
+    
+    ul.topnav.responsive li.dropdownIcon{
+        position:absolute;                  /*wants it to stay in the same position */
+        top:0;
+        right:0;                            /*making sure it stays in the top right position */
+    }
+    
+    ul.topnav.responsive{
+        position:relative;
+    }
+    
+    ul.topnav.responsive li{
+        display: inline;
+        float:none;
+    }
+    ul.topnav.responsive li a{
+        display: block;
+        text-align: left;
+    }
+    
+    .col-6, 
+    .col-4, 
+    .col-7, 
+    .col-5 {                    /* Form Container and Video Mobile */
+    width: 100%;
+    margin:0;
+/* col-6 and col-4 will have this function
+        This is for Section 2 and Section 3 of the Website */
+    }
+    
+    div.mobileStack {
+        width: 50%;
+        display: block;
+    }
+    
+    div.box {
+        padding: 5px;
+        display: block;
+    }
+    
+    div.leftSide-col, div.rightSide-col {   /* Overwrite the margin of 30% and 15% */
+       margin: 15px; 
+    }
+    
+    input[type="text"] {
+        width: 350px
+    }
+    
+    .video-container iframe{        /* BE SPECIFIC. You want the video to take 100%. So take iframe. */
+        position: relative;         /* So it stays in its normal position */
+        width: 100%;
+        margin: 0;
+        overflow: hidden;           /* To stop browsers from making the scroll back side-to-side.  */
+    }
+    
+    h1.section2Header {
+        font-weight: 700;
+        font-size: 50px;
+        text-align: center;
+    }
+    
+    article p {
+    font-size: 25px;
+    }
+    
+    div.lilyIcon {     
+        margin: 20px;
+    } 
+    
+    div.lilyIcon img {
+        width: 100%;
+    }
+    
+    
+}
+
+
+
+/* Check link :https://www.youtube.com/watch?v=sLBrE13iAeY&list=PUDsEHTvh-YO80AZna7X7UVA&index=19 */
+
+
+/*################ Mobile End ################# */
+
+
+
+
+
